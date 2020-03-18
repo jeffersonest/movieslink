@@ -1,0 +1,31 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/vars.scss';
+
+nav {
+    height: $navsize;
+    width: 100%;
+    background: -webkit-linear-gradient(11deg,#fb983a,#ff5a00);
+    background: linear-gradient(79deg,#fb983a,#ff5a00);
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .search-container {
+        width: 400px;
+        @media (max-width: 320px) {
+            width: 300px;
+        }  
+    }
+
+    .logo-container {
+        width: 100px;
+        img {
+            width: 45px;
+            cursor: pointer;
+        }
+    }
+}
