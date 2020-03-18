@@ -1,0 +1,8 @@
+@import './vars.scss';
+
+.main-container {
+    position: relative;
+    margin-top: $navsize;
+    width: 100%;
+    height: 100%;
+}
