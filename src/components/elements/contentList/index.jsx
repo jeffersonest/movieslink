@@ -1,14 +1,21 @@
 import React from 'react';
 import { Row, Col } from 'react-grid-system';
 import './styles.scss';
+import ContentModal from '../contentModal';
 
 // import { Container } from './styles';
 
 const ContentList = () => {
+
+    function handleModal(e) {
+        console.log(e)
+    }
+
     return (
         <div className="content-container">
             <Row className="content-box">
-                <Col className="content-element" lg={3} md={3}>
+                <Col className="content-element" lg={3} md={3} onClick={(event) => handleModal(event)}>
+                    <ContentModal />
                     <div className="body">
                         <div className="header kanit-font ">
                             Punisher: War Zone
