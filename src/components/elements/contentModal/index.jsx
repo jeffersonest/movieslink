@@ -1,23 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Modal from 'react-modal';
 import './styles.scss';
+import { closeModal } from '../../../actions/modal.action';
+import { useDispatch } from 'react-redux';
 
 const ContentModal = (props) => {
 
     Modal.setAppElement('#root');
-    
-    const [isOpen, setIsOpen] = useState(true)
+    const dispatch = useDispatch();
 
-    useEffect(() => {
-        setIsOpen(props.isOpen); 
-    }, [props.isOpen])
-
-    function handleClose() {
-        setIsOpen(false);
-    }
+    let isOpen = props.isOpen;
 
     return (
-        <Modal isOpen={isOpen} onRequestClose={() => handleClose()}
+        <Modal isOpen={isOpen} onRequestClose={() => dispatch(closeModal())}
             aria={{
                 labelledby: "heading",
                 describedby: "full_description"
