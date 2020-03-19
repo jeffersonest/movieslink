@@ -8,63 +8,15 @@ const ContentList = () => {
     return (
         <div className="content-container">
             <Row className="content-box">
-                <Col className="content-element" md={3}>
-                    <div className="header">
-                        HEADER
-                    </div>
+                <Col className="content-element" lg={3} md={3}>
                     <div className="body">
-                        BODY
-                    </div>
-                    <div className="footer">
-                        FOOTER
-                    </div>
-                </Col>
-
-                <Col className="content-element" md={3}>
-                    <div className="header">
-                        HEADER
-                    </div>
-                    <div className="body">
-                        BODY
-                    </div>
-                    <div className="footer">
-                        FOOTER
-                    </div>
-                </Col>
-
-                <Col className="content-element" md={3}>
-                    <div className="header">
-                        HEADER
-                    </div>
-                    <div className="body">
-                        BODY
-                    </div>
-                    <div className="footer">
-                        FOOTER
-                    </div>
-                </Col>
-
-                <Col className="content-element" md={3}>
-                    <div className="header">
-                        HEADER
-                    </div>
-                    <div className="body">
-                        BODY
-                    </div>
-                    <div className="footer">
-                        FOOTER
-                    </div>
-                </Col>
-
-                <Col className="content-element" md={3}>
-                    <div className="header">
-                        HEADER
-                    </div>
-                    <div className="body">
-                        BODY
-                    </div>
-                    <div className="footer">
-                        FOOTER
+                        <div className="header kanit-font ">
+                            Punisher: War Zone
+                        </div>
+                        <img src="https://image.tmdb.org/t/p/w1280/i6Zg52KFtG5vCZXBMMyoLLsQAHU.jpg" style={{ width: '100%' }} alt="bg" />
+                        <div className="footer baloo-font">
+                            Waging his one-man war on the world of organized crime, ruthless vigilante-hero Frank Castle sets his sights on overeager mob boss Billy Russoti. After Russoti is left... 
+                        </div>
                     </div>
                 </Col>
             </Row>

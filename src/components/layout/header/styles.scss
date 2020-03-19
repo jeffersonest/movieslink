@@ -4,8 +4,8 @@
 nav {
     height: $navsize;
     width: 100%;
-    background: -webkit-linear-gradient(11deg,#fb983a,#ff5a00);
-    background: linear-gradient(79deg,#fb983a,#ff5a00);
+    background: -webkit-linear-gradient(11deg,black ,#ff5a00);
+    background: linear-gradient(79deg,black ,#ff5a00);
     top: 0;
     position: fixed;
     z-index: 999;
@@ -13,6 +13,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    transition: background .5s linear;
 
     .search-container {
         width: 400px;
@@ -22,10 +23,35 @@ nav {
     }
 
     .logo-container {
-        width: 100px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+
         img {
             width: 45px;
             cursor: pointer;
         }
+
+        span {
+            margin-left: 10px;
+            font-size: 30px;
+
+            @media (max-width: 585px) {
+                font-size: 20px;
+            }  
+
+            @media (max-width: 475px) {
+                display: NONE;
+            }  
+        }
+    }
+
+    &.scrolled {
+      background: rgba(0, 0, 0, .6);
+      transition: background .5s linear;
+
+      .search-container {
+          background-color: black;
+      }
     }
 }
