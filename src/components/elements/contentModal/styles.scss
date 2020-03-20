@@ -10,11 +10,7 @@
 
     &:focus {
         border: none;
-    }
-
-    
-
-    
+    }    
 }
 
 .header {
@@ -25,6 +21,7 @@
         color: rgba(39, 39, 39, 0.788);
     }
 }
+
 .body {
     padding-top: 25px;
     .poster-box {
@@ -44,6 +41,20 @@
     }
 
     .movie-info {
-
+        .movie-info-body {
+            display: flex;
+        }
     }
+}
+
+.gender-tag {
+    color: white;
+    background-color: black;
+    max-width: 200px;
+    padding: 5px 25px;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    border-radius: 0px 0 60px 0px;
 }

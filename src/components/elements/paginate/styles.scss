@@ -26,6 +26,10 @@
                 text-decoration-color: $base-orange;
                 -webkit-text-decoration-color: $base-orange;
             }
+
+            &:focus {
+                border: none;
+            }
         }
 
         .pages-container {
