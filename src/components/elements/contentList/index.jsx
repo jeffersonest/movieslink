@@ -13,8 +13,8 @@ const ContentList = () => {
     return (
         <div className="content-container">
             <ContentModal isOpen={isOpen}/>
-            <Row className="content-box" onClick={() => dispatch(openModal())}>
-                <Col className="content-element" lg={3}>
+            <Row className="content-box">
+                <Col className="content-element" lg={3} onClick={() => dispatch(openModal())}>
                     <div className="body">
                         <div className="header kanit-font ">
                             Punisher: War Zone
@@ -26,53 +26,7 @@ const ContentList = () => {
                     </div>
                 </Col>
 
-                <Col className="content-element" lg={3}>
-                    <div className="body">
-                        <div className="header kanit-font ">
-                            Punisher: War Zone
-                        </div>
-                        <img src="https://image.tmdb.org/t/p/w1280/i6Zg52KFtG5vCZXBMMyoLLsQAHU.jpg" style={{ width: '100%' }} alt="bg" />
-                        <div className="footer baloo-font">
-                            Waging his one-man war on the world of organized crime, ruthless vigilante-hero Frank Castle sets his sights on overeager mob boss Billy Russoti. After Russoti is left... 
-                        </div>
-                    </div>
-                </Col>
 
-                <Col className="content-element" lg={3}>
-                    <div className="body">
-                        <div className="header kanit-font ">
-                            Punisher: War Zone
-                        </div>
-                        <img src="https://image.tmdb.org/t/p/w1280/i6Zg52KFtG5vCZXBMMyoLLsQAHU.jpg" style={{ width: '100%' }} alt="bg" />
-                        <div className="footer baloo-font">
-                            Waging his one-man war on the world of organized crime, ruthless vigilante-hero Frank Castle sets his sights on overeager mob boss Billy Russoti. After Russoti is left... 
-                        </div>
-                    </div>
-                </Col>
-
-                <Col className="content-element" lg={3}>
-                    <div className="body">
-                        <div className="header kanit-font ">
-                            Punisher: War Zone
-                        </div>
-                        <img src="https://image.tmdb.org/t/p/w1280/i6Zg52KFtG5vCZXBMMyoLLsQAHU.jpg" style={{ width: '100%' }} alt="bg" />
-                        <div className="footer baloo-font">
-                            Waging his one-man war on the world of organized crime, ruthless vigilante-hero Frank Castle sets his sights on overeager mob boss Billy Russoti. After Russoti is left... 
-                        </div>
-                    </div>
-                </Col>
-
-                <Col className="content-element" lg={3}>
-                    <div className="body">
-                        <div className="header kanit-font ">
-                            Punisher: War Zone
-                        </div>
-                        <img src="https://image.tmdb.org/t/p/w1280/i6Zg52KFtG5vCZXBMMyoLLsQAHU.jpg" style={{ width: '100%' }} alt="bg" />
-                        <div className="footer baloo-font">
-                            Waging his one-man war on the world of organized crime, ruthless vigilante-hero Frank Castle sets his sights on overeager mob boss Billy Russoti. After Russoti is left... 
-                        </div>
-                    </div>
-                </Col>
             </Row>
         </div>
     )
