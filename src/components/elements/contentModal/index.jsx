@@ -12,7 +12,7 @@ const ContentModal = (props) => {
     let isOpen = props.isOpen;
 
     return (
-        <Modal isOpen={isOpen} onRequestClose={() => dispatch(closeModal())}
+        <Modal className="modal-box" isOpen={isOpen} onRequestClose={() => dispatch(closeModal())}
             aria={{
                 labelledby: "heading",
                 describedby: "full_description"
