@@ -1,14 +1,20 @@
 import React from 'react';
 import { Row, Col } from 'react-grid-system';
 import './styles.scss';
-
-// import { Container } from './styles';
+import ContentModal from '../contentModal';
+import { useDispatch, useSelector } from 'react-redux';
+import { openModal } from '../../../actions/modal.action';
 
 const ContentList = () => {
+
+    const dispatch = useDispatch();
+    const isOpen = useSelector(state => state.modal.isOpen)
+
     return (
         <div className="content-container">
+            <ContentModal isOpen={isOpen}/>
             <Row className="content-box">
-                <Col className="content-element" lg={3} md={3}>
+                <Col className="content-element" lg={3} onClick={() => dispatch(openModal())}>
                     <div className="body">
                         <div className="header kanit-font ">
                             Punisher: War Zone
@@ -19,6 +25,8 @@ const ContentList = () => {
                         </div>
                     </div>
                 </Col>
+
+
             </Row>
         </div>
     )

@@ -1,0 +1,49 @@
+.styles_modal__gNwvD {
+    min-width: 60%;
+}
+
+.modal-box {
+    background-color: rgb(211, 15, 15);
+    padding: 0 30px;
+
+    min-height: 600px;
+
+    &:focus {
+        border: none;
+    }
+
+    
+
+    
+}
+
+.header {
+    font-size: 25px;
+    padding-bottom: 15px;
+
+    .year {
+        color: rgba(39, 39, 39, 0.788);
+    }
+}
+.body {
+    padding-top: 25px;
+    .poster-box {
+        display: flex;
+        justify-content: center;
+
+        .poster-image {
+            display: block;
+            width: 70%;
+            border-width: 0px;
+            outline: none;
+            border-radius: 7px;
+            margin-bottom: 30px;
+            -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+        }
+    }
+
+    .movie-info {
+
+    }
+}
