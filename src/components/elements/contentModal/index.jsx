@@ -10,6 +10,9 @@ const ContentModal = () => {
     const dispatch = useDispatch();
     const isOpen = useSelector(state => state.modal.isOpen)
 
+    const statex = useSelector(state => state)
+    console.log('STATUS modal', statex);
+    
     return (
         // (name, poster image, genre, overview,release date).
         <Modal  className="modal-box" open={isOpen} onClose={() => dispatch(closeModal())}>

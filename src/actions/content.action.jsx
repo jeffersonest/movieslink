@@ -10,9 +10,16 @@ export const contentRequestSuccess = () => {
     }
 }
 
-export const contentRequestData = (data) => {
+export const contentRequestData = (payload) => {
     return {
         type: 'CONTENT_REQUEST_DATA',
-        payload: data
+        payload
+    }
+}
+
+export const contentSearchText = (payload) => {
+    return {
+        type: 'CONTENT_SEARCH_TEXT',
+        payload
     }
 }

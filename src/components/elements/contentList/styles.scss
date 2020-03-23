@@ -40,6 +40,14 @@
             right: 0;
             color: white;
             background-color: rgba(0, 0, 0, .2);
+
+            p { 
+                max-width: 100%;
+                overflow:hidden; 
+                white-space:nowrap; 
+                text-overflow: ellipsis;
+            }
+
         }
 
         .footer {

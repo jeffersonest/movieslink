@@ -1,8 +1,8 @@
 import api from '../services/api';
 
-async function contentProvider(query, route = "content/search") {
+async function contentProvider(query, route = "content") {
 
-    let  {page, content_name} = query;
+    let  {page, content_name = ''} = query;
 
     let query_params = {
         params: {

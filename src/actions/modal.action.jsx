@@ -1,14 +1,12 @@
-export const openModal = (data) => {
+export const openModal = () => {
     return {
         type: 'OPEN_MODAL',
-        payload: data
     }
 }
 
-export const closeModal = (data) => {
+export const closeModal = () => {
     return {
         type: 'CLOSE_MODAL',
-        payload: data
     }
 }
 

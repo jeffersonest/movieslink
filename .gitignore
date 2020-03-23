@@ -7,3 +7,5 @@ build/Release
 node_modules/
 .npm
 .eslintcache
+.DS_Store
+./*/.DS_Store
