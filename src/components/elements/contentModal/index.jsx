@@ -2,14 +2,13 @@ import React from 'react';
 import Modal from 'react-responsive-modal';
 import './styles.scss';
 import { closeModal } from '../../../actions/modal.action';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col, Container } from 'react-grid-system';
 
-const ContentModal = (props) => {
+const ContentModal = () => {
 
     const dispatch = useDispatch();
-
-    let isOpen = props.isOpen;
+    const isOpen = useSelector(state => state.modal.isOpen)
 
     return (
         // (name, poster image, genre, overview,release date).

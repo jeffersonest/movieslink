@@ -11,6 +11,7 @@
         padding: 0 30px;        
         display: flex;
         align-items: center;
+        background: black;
 
         .index-button {
             border: none;
@@ -21,10 +22,10 @@
             padding: 0 10px;
 
             &:hover {
-                text-decoration: underline 3px $base-orange;
+                text-decoration: underline 3px white;
                 text-decoration: underline;
-                text-decoration-color: $base-orange;
-                -webkit-text-decoration-color: $base-orange;
+                text-decoration-color: white;
+                -webkit-text-decoration-color: white;
             }
 
             &:focus {

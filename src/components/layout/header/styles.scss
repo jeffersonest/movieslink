@@ -4,8 +4,7 @@
 nav {
     height: $navsize;
     width: 100%;
-    background: -webkit-linear-gradient(11deg,black ,#ff5a00);
-    background: linear-gradient(79deg,black ,#ff5a00);
+    background: black;
     top: 0;
     position: fixed;
     z-index: 999;
@@ -50,8 +49,9 @@ nav {
       background: rgba(0, 0, 0, .6);
       transition: background .5s linear;
 
-      .search-container {
-          background-color: black;
+      input {
+          background-color: rgba(0, 0, 0, .7);
       }
+
     }
 }

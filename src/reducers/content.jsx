@@ -1,7 +1,7 @@
 const initialState = {
     content: {
         isPending: false,
-        data: []
+        data: {}
     }
 };
 
