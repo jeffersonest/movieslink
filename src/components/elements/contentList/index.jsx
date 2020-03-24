@@ -12,7 +12,6 @@ const ContentList = () => {
     const dispatch = useDispatch();
     const data = useSelector(state => state.content.data)
     const contentRequestStatus = useSelector(state => state.content)
-    const state = useSelector(state => state)
 
     useEffect(()=>{
         async function loadContent() {
@@ -20,11 +19,12 @@ const ContentList = () => {
             try {
                 dispatch(contentRequestPending())
                 const response = await contentProvider({page}, "content");
-                dispatch(contentRequestSuccess())
-                if (response.error)
+                if (response.error) {
                     dispatch(contentRequestError())
-                else                    
+                } else {                 
                     dispatch(contentRequestData(response));
+                    dispatch(contentRequestSuccess())
+                }    
             } catch (error) {
                 dispatch(contentRequestError())
             }    
@@ -46,7 +46,7 @@ const ContentList = () => {
                             <Col key={key} className="content-element" md={4} onClick={() => dispatch(openModal(content))}>
                                 <div className="body">
                                     <div className="header kanit-font content-title">
-                                        <p>{content.title || content.name}</p>
+                                        <p>{content.title || content.name} ({`${content.release_date}`.substring(0, 4)})</p>
                                     </div>
                                     <img src={(content.backdrop_path === null || content.backdrop_path === undefined) ? '/images/messages/image_not_found.png' : `https://image.tmdb.org/t/p/w1280/${content.backdrop_path}`} style={{ width: '100%' }} alt="background not uploaded" />
                                     <div className="footer baloo-font">
@@ -100,8 +100,6 @@ const ContentList = () => {
             </div>    
         )
     }
-
-    console.log('TOTAL STATUS', state);
 
     if(contentRequestStatus.error)
         return renderError()

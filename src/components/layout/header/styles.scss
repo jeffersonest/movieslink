@@ -14,6 +14,10 @@ nav {
     padding: 0 20px;
     transition: background .5s linear;
 
+    @media (max-width: 600px) {
+        justify-content: center !important;
+    }  
+
     .search-container {
         width: 400px;
         @media (max-width: 320px) {
@@ -26,6 +30,10 @@ nav {
         display: flex;
         align-items: center;
 
+        @media (max-width: 600px) {
+            display: none !important;
+        }          
+
         img {
             width: 45px;
             cursor: pointer;
@@ -37,10 +45,6 @@ nav {
 
             @media (max-width: 585px) {
                 font-size: 20px;
-            }  
-
-            @media (max-width: 475px) {
-                display: NONE;
             }  
         }
     }

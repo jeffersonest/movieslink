@@ -17,6 +17,8 @@
         align-items: center;
         background: black;
 
+
+
         .index-button {
             border: none;
             background-color: transparent;
@@ -40,17 +42,17 @@
         .pages-container {
             color: white;
 
+            .actual {
+                color: orange !important;
+                text-decoration: none !important;
+                font-size: 23px !important;
+                cursor: unset !important;
+            }
+
             .page-number {
                 font-size: 22px;
                 padding: 0 10px;
-                cursor: pointer;
-
-                &:hover {
-                    text-decoration: underline 3px $base-orange;
-                    text-decoration: underline;
-                    text-decoration-color: $base-orange;
-                    -webkit-text-decoration-color: $base-orange;
-                }
+                cursor: unset;
             }
         }
     }

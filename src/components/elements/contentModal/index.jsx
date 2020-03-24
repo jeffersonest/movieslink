@@ -11,7 +11,7 @@ const ContentModal = () => {
 
     const dispatch = useDispatch();
     const {isOpen, contentInfo, genre_text} = useSelector(state => state.modal);
-    
+
     useEffect(()=>{
         async function loadGenres() {
             const data =  await contentProvider({genres : contentInfo.genre_ids}, 'content/genres');
