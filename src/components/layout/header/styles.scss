@@ -29,6 +29,7 @@ nav {
         width: 300px;
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         @media (max-width: 600px) {
             display: none !important;
