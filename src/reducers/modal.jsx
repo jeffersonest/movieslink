@@ -1,21 +1,22 @@
 const initialState = {
-    modal : {
+        genre_text : '',
         isOpen : false,
-        contentInfo : {}
-    }
+        contentInfo : {
+            genre_ids : []
+        }
 };
 
-const contentReducer = (state = initialState, action) => {
+const modalReducer = (state = initialState, action) => {
     switch(action.type){
+        case 'FETCH_GENRES' :
+            return (state = {...state, genre_text: action.payload})
         case 'OPEN_MODAL':
-            return state.modal = {...state, isOpen: true}
+            return (state = {...state, isOpen: true, genre_text: '', contentInfo: action.payload})
         case 'CLOSE_MODAL':
-            return state.modal = {...state, isOpen: false}
-        case 'MODAL_DATA':
-            return state.contentInfo = {...state, contentInfo: action.payload}
+            return (state = {...state, genre_text: '', isOpen: false})
         default:
-            return state = initialState.modal          
+            return (state)         
     }
 }
 
-export default contentReducer
+export default modalReducer

@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 import contentProvider from '../../../providers/contentProvider';
 import { useDispatch } from 'react-redux';
-import { contentRequestData, contentSearchText } from '../../../actions/content.action';
+import { contentRequestData, contentSearchText, contentRequestPending, contentRequestSuccess, contentRequestError } from '../../../actions/content.action';
 // import { Container } from './styles';
 
 const Search = (props) => {
@@ -15,11 +15,21 @@ const Search = (props) => {
 
         const content_name = e.target[0].value;
 
-        const data = await contentProvider({ content_name, page: 1 }, 'content/search');
-
-        dispatch(contentSearchText(content_name))
-        dispatch(contentRequestData(data))
-
+        try {
+            dispatch(contentRequestPending())
+            const data = await contentProvider({ content_name, page: 1 }, 'content/search');
+            dispatch(contentRequestSuccess())
+            
+            if (data.error)
+                dispatch(contentRequestError())
+            else
+                dispatch(contentRequestData(data)); 
+                dispatch(contentSearchText(content_name)) ; 
+                
+            
+        } catch (error) {
+            dispatch(contentRequestError())
+        }    
     }
 
     return (

@@ -17,24 +17,19 @@
     }    
 }
 
-.header {
-    font-size: 25px;
-    padding-bottom: 15px;
 
-    .year {
-        color: rgba(39, 39, 39, 0.788);
-    }
-}
 
 .body {
+    
     padding-top: 25px;
     .poster-box {
+        padding-top: 15px;
         display: flex;
         justify-content: center;
 
         .poster-image {
             display: block;
-            width: 70%;
+            width: 100%;
             border-width: 0px;
             outline: none;
             border-radius: 7px;
@@ -44,17 +39,52 @@
         }
     }
 
-    .movie-info {
-        .movie-info-body {
-            display: flex;
+    .content-info {
+        .header {        
+            font-size: 25px;
+            padding-bottom: 15px;
+        
+            @media (max-width: 570px) {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                font-size: 18px;
+            }  
+        
+            .year {
+                color: rgba(39, 39, 39, 0.788);
+            }
         }
+
+        .content-info-body {
+            display: flex;
+            justify-content: flex-start;
+
+            .content-overview{
+                text-align: justify;
+            }
+
+            @media (max-width: 570px) {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }  
+        }
+
+        @media (max-width: 570px) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }  
     }
+
+    @media (max-width: 570px) {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 15px;
+    }  
 }
 
 .gender-tag {
     color: white;
     background-color: black;
-    max-width: 200px;
     padding: 5px 25px;
     position: absolute;
     z-index: 10;

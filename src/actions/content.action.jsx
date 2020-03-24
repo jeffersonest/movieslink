@@ -23,3 +23,9 @@ export const contentSearchText = (payload) => {
         payload
     }
 }
+
+export const contentRequestError = () => {
+    return {
+        type: 'CONTENT_REQUEST_ERROR'
+    }
+}

@@ -3,8 +3,8 @@ import modalReducer from './modal';
 import {combineReducers} from 'redux';
 
 const Reducers = combineReducers({
-    content: contentReducer,
-    modal: modalReducer
+    modal: modalReducer,
+    content: contentReducer
 });
 
 export default Reducers;

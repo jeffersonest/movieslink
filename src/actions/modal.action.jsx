@@ -1,6 +1,7 @@
-export const openModal = () => {
+export const openModal = (payload) => {
     return {
         type: 'OPEN_MODAL',
+        payload
     }
 }
 
@@ -10,9 +11,9 @@ export const closeModal = () => {
     }
 }
 
-export const modalData = (data) => {
+export const fetchGenres = (payload) => {
     return {
-        type: 'MODAL_DATA',
-        payload: data
+        type: 'FETCH_GENRES',
+        payload
     }
 }
