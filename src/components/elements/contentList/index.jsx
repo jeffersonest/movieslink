@@ -10,29 +10,29 @@ import {contentRequestData, contentRequestPending, contentRequestSuccess, conten
 const ContentList = () => {
 
     const dispatch = useDispatch();
+    const data = useSelector(state => state.content.data)
+    const contentRequestStatus = useSelector(state => state.content)
+    const state = useSelector(state => state)
 
     useEffect(()=>{
         async function loadContent() {
-            
+            const page = data.page;
             try {
                 dispatch(contentRequestPending())
-                const data = await contentProvider({page: 1}, "content");
+                const response = await contentProvider({page}, "content");
                 dispatch(contentRequestSuccess())
-                if (data.error)
+                if (response.error)
                     dispatch(contentRequestError())
                 else                    
-                    dispatch(contentRequestData(data));
+                    dispatch(contentRequestData(response));
             } catch (error) {
                 dispatch(contentRequestError())
             }    
         }
         loadContent()
-    }, [dispatch]);
+    }, [dispatch, data.page]);
  
-    const data = useSelector(state => state.content.data)
-    const contentRequestStatus = useSelector(state => state.content)
 
-    const state = useSelector(state => state)
     
     function renderList(){
         return (

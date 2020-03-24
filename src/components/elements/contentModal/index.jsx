@@ -17,8 +17,8 @@ const ContentModal = () => {
             const data =  await contentProvider({genres : contentInfo.genre_ids}, 'content/genres');
             dispatch(fetchGenres(data))
         }
-        loadGenres();
-    },[dispatch, contentInfo.genre_ids]);
+        if(isOpen) loadGenres();
+    },[dispatch, contentInfo.genre_ids, isOpen]);
 
     return (   
         // (name, poster image, genre, overview,release date).
@@ -27,7 +27,7 @@ const ContentModal = () => {
             <Container >
                 <Row className="body">     
                     <Col lg={4} className="poster-box">
-                        <img className="poster-image" src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${contentInfo.poster_path}`} width="320" alt="poster"></img>
+                        <img className="poster-image" src={(contentInfo.poster_path === null || contentInfo.poster_path === undefined) ? '/images/messages/image_not_found.png' : `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${contentInfo.poster_path}`} style={{ width: '100%' }} width="320" alt="poster"/>
                     </Col>
                     <Col lg={8} className="content-info">
                         <Col lg={12} className="header">
