@@ -68,7 +68,7 @@ const ContentList = () => {
                 <Row className="content-box">  
                     <Col md={12} className="generic-box">
                         <img src="/images/messages/error.gif" alt="imag-error-found"></img>
-                        <h2 className="baloo-font">We had problem! Please, check your search.</h2>
+                        <h2 className="baloo-font">We had a problem! Please, try again later.</h2>
                     </Col>    
                 </Row>
             </div>    

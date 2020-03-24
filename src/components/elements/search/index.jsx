@@ -35,7 +35,7 @@ const Search = (props) => {
     return (
         <>
             <form onSubmit={(event) => handleSubmit(event)}>
-                <input className="baloo-font" type="text" placeholder=" Search for Gender, Films, Series..."></input>
+                <input className="baloo-font" type="text" placeholder=" Search for Movies, Series, Genres..." required="required"></input>
             </form>
         </>
     )
