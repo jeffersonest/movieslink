@@ -50,7 +50,7 @@ const ContentList = () => {
                                     </div>
                                     <img src={(content.backdrop_path === null || content.backdrop_path === undefined) ? '/images/messages/image_not_found.png' : `https://image.tmdb.org/t/p/w1280/${content.backdrop_path}`} style={{ width: '100%' }} alt="background not uploaded" />
                                     <div className="footer baloo-font">
-                                        <p className="content-text">Waging his one-man war on the world of organized crime, ruthless vigilante-hero Frank Castle sets his sights on overeager mob boss Billy Russoti. After Russoti is left </p>
+                                        <p className="content-text">{content.overview}</p>
                                     </div>
                                 </div>
                             </Col>
