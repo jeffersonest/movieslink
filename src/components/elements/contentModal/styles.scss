@@ -1,0 +1,94 @@
+.styles_modal__gNwvD {
+    min-width: 60%;
+
+    .styles_closeButton__20ID4 {
+        cursor: pointer;
+    }
+}
+
+.modal-box {
+    background-color: rgb(211, 15, 15);
+    padding: 0 30px;
+
+    min-height: 600px;
+
+    &:focus {
+        border: none;
+    }    
+}
+
+
+
+.body {
+    
+    padding-top: 25px;
+    .poster-box {
+        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+
+        .poster-image {
+            display: block;
+            width: 100%;
+            border-width: 0px;
+            outline: none;
+            border-radius: 7px;
+            margin-bottom: 30px;
+            -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+        }
+    }
+
+    .content-info {
+        .header {        
+            font-size: 25px;
+            padding-bottom: 15px;
+        
+            @media (max-width: 570px) {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                font-size: 18px;
+            }  
+        
+            .year {
+                color: rgba(39, 39, 39, 0.788);
+            }
+        }
+
+        .content-info-body {
+            display: flex;
+            justify-content: flex-start;
+
+            .content-overview{
+                text-align: justify;
+            }
+
+            @media (max-width: 570px) {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }  
+        }
+
+        @media (max-width: 570px) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }  
+    }
+
+    @media (max-width: 570px) {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 15px;
+    }  
+}
+
+.gender-tag {
+    color: white;
+    background-color: black;
+    padding: 5px 25px;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    border-radius: 0px 0 60px 0px;
+}

@@ -1,0 +1,101 @@
+.content-container {
+    padding: 0 30px;
+    height: 100%;
+    padding-bottom: 30px;
+
+    .generic-box {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        img {
+            max-width: 250px;
+        }
+    }
+
+    .content-box {
+        height: 90%;
+    }
+
+    .content-element {
+    margin-top: 30px;
+    cursor: pointer;
+    
+
+    &:hover { 
+        .footer {
+            height: 45% !important;
+            opacity: 1 !important;
+            background-color: rgba(0, 0, 0, .85) !important;
+        }
+
+        .header {
+            transition: all .2s linear;
+            background-color: rgba(0, 0, 0, 0.85) !important;
+        }
+    }
+    
+    .body {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding-top: 0;
+
+        img {
+            height: 100%;
+        }
+
+        .header {
+            height: 30px;
+            padding-left: 10px;
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            color: white;
+            background-color: rgba(0, 0, 0, .2);
+
+            p { 
+                max-width: 100%;
+                overflow:hidden; 
+                white-space:nowrap; 
+                text-overflow: ellipsis;
+            }
+
+        }
+
+        .footer {
+            left: 0;
+            right: 0;
+            bottom: 3px;
+            height: 0;
+            opacity: 0;
+            color: white;
+            position: absolute;    
+            background-color: rgba(0, 0, 0, .2);
+            padding: 10px;
+            transition: all .2s linear;
+
+            .content-text {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                text-align: justify;
+            
+                &:after {
+                    content: '...';
+                }
+            }
+      
+        }
+    }
+}
+
+}
+
+

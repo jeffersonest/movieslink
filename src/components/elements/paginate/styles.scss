@@ -1,0 +1,59 @@
+@import '../../../styles/colors.scss';
+
+.pagination-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    margin-top: 30px;
+    padding-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+
+    .index-box { 
+        border: 5px solid white;
+        padding: 0 30px;        
+        display: flex;
+        align-items: center;
+        background: black;
+
+
+
+        .index-button {
+            border: none;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            font-size: 22px;
+            padding: 0 10px;
+
+            &:hover {
+                text-decoration: underline 3px white;
+                text-decoration: underline;
+                text-decoration-color: white;
+                -webkit-text-decoration-color: white;
+            }
+
+            &:focus {
+                border: none;
+            }
+        }
+
+        .pages-container {
+            color: white;
+
+            .actual {
+                color: orange !important;
+                text-decoration: none !important;
+                font-size: 23px !important;
+                cursor: unset !important;
+            }
+
+            .page-number {
+                font-size: 22px;
+                padding: 0 10px;
+                cursor: unset;
+            }
+        }
+    }
+}

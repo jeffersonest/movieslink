@@ -1,0 +1,62 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/vars.scss';
+
+nav {
+    height: $navsize;
+    width: 100%;
+    background: black;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: background .5s linear;
+
+    @media (max-width: 600px) {
+        justify-content: center !important;
+    }  
+
+    .search-container {
+        width: 400px;
+        @media (max-width: 320px) {
+            width: 300px;
+        }  
+    }
+
+    .logo-container {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        @media (max-width: 600px) {
+            display: none !important;
+        }          
+
+        img {
+            width: 45px;
+            cursor: pointer;
+        }
+
+        span {
+            margin-left: 10px;
+            font-size: 30px;
+
+            @media (max-width: 585px) {
+                font-size: 20px;
+            }  
+        }
+    }
+
+    &.scrolled {
+      background: rgba(0, 0, 0, .6);
+      transition: background .5s linear;
+
+      input {
+          background-color: rgba(0, 0, 0, .7);
+      }
+
+    }
+}
